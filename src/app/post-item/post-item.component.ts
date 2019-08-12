@@ -8,7 +8,7 @@ import IPost from '../interfaces/post';
   styleUrls: ['./post-item.component.css']
 })
 export class PostItemComponent implements OnInit {
-  @Input() todo: IPost;
+  @Input() post: IPost;
 
   constructor(private postService: PostService) { }
 
