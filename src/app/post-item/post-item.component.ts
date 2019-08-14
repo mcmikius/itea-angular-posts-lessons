@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PostService} from '../services/post.service';
 import IPost from '../interfaces/post';
 
@@ -9,10 +9,14 @@ import IPost from '../interfaces/post';
 })
 export class PostItemComponent implements OnInit {
   @Input() post: IPost;
+  @Output() postItem = new EventEmitter<any>();
 
   constructor(private postService: PostService) { }
 
   ngOnInit() {
   }
 
+  getPostItem(id: number) {
+    this.postItem.emit(id);
+  }
 }

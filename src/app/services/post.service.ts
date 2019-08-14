@@ -22,16 +22,10 @@ export class PostService {
       }));
   }
 
-  getPost(id: string = '1'): Promise<IPost> {
-    return fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+  getPost(id?: number): Promise<any> {
+    console.log(id);
+    return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then(response => response.json())
-      .then(post => {
-        return {
-          userId: post.userId,
-          id: post.id,
-          title: post.title,
-          body: post.body
-        };
-      });
+      .then(json => console.log(json));
   }
 }

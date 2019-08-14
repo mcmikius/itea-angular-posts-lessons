@@ -19,4 +19,11 @@ export class PostsListComponent implements OnInit {
       this.posts = response;
     });
   }
+
+  getPostItem(id: number) {
+    console.log(id);
+    this.postService.getPost(id).then((response) => {
+      this.posts = response;
+    });
+  }
 }

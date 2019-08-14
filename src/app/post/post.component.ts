@@ -12,9 +12,7 @@ export class PostComponent implements OnInit {
   constructor(private postService: PostService) { }
 
   ngOnInit() {
-    this.postService.getPost().then((response) => {
-      this.post = response;
-    });
+
   }
 
 }
