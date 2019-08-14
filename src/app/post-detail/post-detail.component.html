@@ -1,6 +1,18 @@
 <div *ngIf="post">
-  <button routerLink="/">Back to Post List</button>
-  <h2>{{post.title}}</h2>
-  <p>{{post.body}}</p>
+  <mat-card>
+    <button routerLink="/">Back to Post List</button>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <h3>{{post.title}}</h3>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{post.body}}</p>
+    </mat-card-content>
+
+
+  </mat-card>
+
 </div>
 
