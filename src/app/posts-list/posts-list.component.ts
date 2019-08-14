@@ -19,5 +19,4 @@ export class PostsListComponent implements OnInit {
       this.posts = response;
     });
   }
-
 }

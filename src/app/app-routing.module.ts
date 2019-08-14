@@ -7,15 +7,15 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
-    path: '', pathMatch: 'full', redirectTo: 'posts'
+    path: 'posts/:id',
+    component: PostComponent
   },
   {
     path: 'posts',
     component: PostsListComponent
   },
   {
-    path: 'posts/:id',
-    component: PostComponent
+    path: '', pathMatch: 'full', redirectTo: '/posts'
   },
   {
     path: '**',

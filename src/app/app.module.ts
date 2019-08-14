@@ -7,7 +7,7 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostComponent } from './post/post.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule, MatIconModule, MatListModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatListModule} from '@angular/material';
 import { PostItemComponent } from './post-item/post-item.component';
 
 @NgModule({
@@ -24,7 +24,8 @@ import { PostItemComponent } from './post-item/post-item.component';
     BrowserAnimationsModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
