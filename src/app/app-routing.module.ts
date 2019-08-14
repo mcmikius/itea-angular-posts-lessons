@@ -1,15 +1,13 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {PostsListComponent} from './posts-list/posts-list.component';
-import {PostComponent} from './post/post.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {PostDetailComponent} from './post-detail/post-detail.component';
+import {PostListComponent} from './post-list/post-list.component';
 
 
 const routes: Routes = [
-  {path: 'posts/:id', component: PostComponent},
-  {path: 'posts', component: PostsListComponent},
-  {path: '', pathMatch: 'full', redirectTo: '/posts'},
-  {path: '**', component: PageNotFoundComponent}
+  {path: '', pathMatch: 'full', redirectTo: 'posts'},
+  {path: 'posts/:postId', component: PostDetailComponent},
+  {path: 'posts', component: PostListComponent}
 ];
 
 @NgModule({
